@@ -1,0 +1,17 @@
+package com.br.cienciascomputacao.faj.Cafe.dao;
+
+
+import java.util.ArrayList;
+
+
+
+import com.br.cienciascomputacao.faj.Cafe.controller.Cafe;
+
+public class CafeDAO {
+
+	private Cafe cafe;
+	private ArrayList<Cafe> listacafe;
+
+
+
+}
