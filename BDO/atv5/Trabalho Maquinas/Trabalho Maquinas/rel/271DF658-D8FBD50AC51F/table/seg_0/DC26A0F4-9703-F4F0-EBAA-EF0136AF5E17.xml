@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DC26A0F4-9703-F4F0-EBAA-EF0136AF5E17" name="VEICULO">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:43:07 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VEICULO" id="3EF00AFF-8E8C-BDE3-3585-4882780ADD04">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:44:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID do Veículo, formado por um número sequencial.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMERO_FROTA" id="795A7692-BD92-0DDF-E67A-1E2EEF3D5960">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:44:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Código de identificação do veículo para o Cliente. Ou, em outras palavras, a forma como o cliente identifica unicamente cada veículo.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODELO" id="B28BDD72-7714-784C-DE24-7DF3F73E8AF3">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:44:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Modelo do veículo, definido pelo fabricante do mesmo.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DEE0763D-64DA-8DC4-D7FF-6B47E8D0DACA" name="PK_VEICULO">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:44:28 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EF00AFF-8E8C-BDE3-3585-4882780ADD04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0EE98A4-11D8-2D4C-B880-B56EEF7787D2" name="AK_NUMERO_FROTA">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 15:10:23 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="795A7692-BD92-0DDF-E67A-1E2EEF3D5960"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

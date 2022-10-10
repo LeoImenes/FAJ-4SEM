@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4F6C0F12-443F-AC56-1160-92FE7DCCC65E" name="DADOS_DIA">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:34:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabela para armazenar os dados trabalho de um veículo em determinado dia. Armazenamos os dados em colunas separadas, mas o TRABALHO é formado pela SOMA das colunas TEMPO_MOVIMENTO, TEMPO_HIDRAULICO, TEMPO_MOV_HIDRAULICO e PARADO_LIGADO.
+A coluna TEMPO_LIGADO não entra como trabalho por ser apenas um tempo que indica que o equipamento de telemetria esteve ligado, não que o veículo / máquina tenha efetivamente trabalhado.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VEICULO" id="29BD068C-05A7-13F3-7254-E6013D9646C9">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:37:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID do Veículo, indicando para qual veículo é o registro de trabalho para o dia.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F5E2E3F-BA86-FB34-E7CF-732FBFDD1847" referredColumn="3EF00AFF-8E8C-BDE3-3585-4882780ADD04"/>
+</associations>
+</Column>
+<Column name="DATA" id="1E24D1E2-72D2-A6DD-F881-3D8D60331B6B">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:37:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Data de registro do trabalho para o Veículo. ATENÇÃO: armazenamos a data com hora 00:00, por ser um campo DATA / HORA, mas não fazemos referência às horas para essa tabela.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEMPO_LIGADO" id="07CA3CD1-EE98-1509-150C-610473D02553">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:41:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tempo, em horas (fração de horas) em que o equipamento de telemetria ficou LIGADO. Não representa o trabalho, apenas tempo em que o equipamento ficou evetivamente ligado.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEMPO_MOVIMENTO" id="4739336F-E2DA-55D5-70A0-38BBF4147534">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:37:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tempo, em horas (fração de horas)  em que o veículo ficou em MOVIMENTO, para compor o trabalho do DIA. Não é computado para todos os tipos de máquinas e, quando não computado, possui valor 0 ZERO.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEMPO_HIDRAULICO" id="663A6F68-DF6F-7F26-3F22-14BF3AAAE1D9">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:37:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tempo, em horas (fração de horas),  em que o veículo ficou ACIONANDO HIDRÁULICO (subndo / descendo, deslodano frente / tras ou lateral) para compor o trabalho do DIA. Não é computado para todos os tipos de máquinas e, quando não computado, possui valor 0 ZERO.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEMPO_MOV_HIDRAULICO" id="9A1DD2F4-BAA9-20C7-1687-649A54B80E0C">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:37:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tempo, em horas (fração de horas),  em que o veículo ficou MOVENDO e, simultaneamente, ACIONANDO HIDRÁULICO), para compor o trabalho do DIA.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TEMPO_PARADO_LIGADO" id="7597EEE4-6AD9-C98B-504C-A25ABEFEF256">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:37:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tempo, em horas (fração de horas),  em que o veículo estava com um Operador PRESENTE, porém não estava executando MOVIMENTO ou ACIONAMENTO HIDRAULICO, para compor o trabalho do DIA.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E96A3F3B-5690-73ED-8594-E93413940B3C" name="PK_DADOS_DIA">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:37:39 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29BD068C-05A7-13F3-7254-E6013D9646C9"/>
+<colUsage columnID="1E24D1E2-72D2-A6DD-F881-3D8D60331B6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71D71D65-308D-DBA3-635D-507495A52C82" name="DADOS_DIA_VEICULO_FK">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:47:53 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29BD068C-05A7-13F3-7254-E6013D9646C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

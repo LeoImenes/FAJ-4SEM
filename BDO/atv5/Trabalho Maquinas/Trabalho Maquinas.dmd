@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Trabalho Maquinas" id="671C1812-03C8-0918-8B74-2159183F74A9" version="3.5">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:34:28 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>671C1812-03C8-0918-8B74-2159183F74A9</designId>
+</OSDM_Design>

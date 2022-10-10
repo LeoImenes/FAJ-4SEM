@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="491EBCB8-EC6F-F92A-4581-56C9AB08214E" name="DADOS_RASTREADOR">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:45:33 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VEICULO" id="ADE02A8F-DFA5-EBCA-9D12-D5B7CE6E4FBD">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:46:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID do Veículo para o qual foi feita a gravação do registro de horímetro do rastreador.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="435B2C15-EDF8-79D6-ACFE-B92E0F1C965D" referredColumn="3EF00AFF-8E8C-BDE3-3585-4882780ADD04"/>
+</associations>
+</Column>
+<Column name="DATA" id="7D1DB1C3-0B2B-32DB-736E-6DC9A55CD014">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:46:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Data/HORA em que foi feito o registro do horímetro do Rastreador.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORIMETRO" id="8627F99D-5749-B442-A877-FAEC247411B1">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:46:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor, em HORAS "CHEIAS", em que o rastreador permaneceu ligado.]]></commentInRDBMS>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F1D84E38-6FF6-0AB1-7002-6CED62CCF033" name="PK_DADOS_RASTREADOR">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:46:50 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ADE02A8F-DFA5-EBCA-9D12-D5B7CE6E4FBD"/>
+<colUsage columnID="8627F99D-5749-B442-A877-FAEC247411B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B06BFD0-C31C-8292-4ABA-F6319577ADE5" name="DADOS_RASTREADOR_VEICULO_FK">
+<createdBy>lucia</createdBy>
+<createdTime>2021-09-20 14:49:24 UTC</createdTime>
+<ownerDesignName>Trabalho Maquinas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ADE02A8F-DFA5-EBCA-9D12-D5B7CE6E4FBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
