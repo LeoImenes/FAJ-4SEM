@@ -109,12 +109,9 @@ int main() {
             	break;
            	case 4:
            		reinicializaFila(&f1);
-      		case 5 :
-      			if(tamanhoFila(&f1) == 0){
-      				printf("Lista Vazia");
-				  }else{
-				  	tamanhoFila(&f1);
-				  }
+      		case 5 :printf("\n\ntamanho da fila %d \n",tamanhoFila(&f1)); 
+            break;
+				  
       			break;
    			case 0 :
    				break;
