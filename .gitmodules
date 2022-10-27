@@ -1,3 +1,6 @@
 [submodule "C_Projects"]
 	path = C_Projects
 	url = https://github.com/LeoImenes/C_Projects
+[submodule "JavaScript-Exercicios"]
+	path = JavaScript-Exercicios
+	url = https://github.com/LeoImenes/JavaScript-Exercicios
