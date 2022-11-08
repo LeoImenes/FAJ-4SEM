@@ -162,8 +162,9 @@ insert into fitas(DESCRICAO,DATA_COMPRA,COD_FILME,DISPONIVEL) values ('Indiana J
 select * from fitas;
 
 /*exercicio 4*/
+
 create view vw_Fita as
-    select ft.descricao as Fita,fl.descricao as Filme,ct.descricao as categoria,ct.PRECO_LOCACAO
+    select  ft.cod_fita, ft.descricao as Fita,fl.descricao as Filme,ct.descricao as categoria,ct.PRECO_LOCACAO
     from fitas fT, filmes fl, categorias ct 
     where 
     ft.cod_filme = fl.cod_filme and
@@ -171,6 +172,30 @@ create view vw_Fita as
     ft.DISPONIVEL = 'S'
     ;
     
-select * from vw_Fita where 
+select * from vw_Fita;
+/*Ex 5 */
 
-/*Exercicio 5 */
+create or replace function fn_fita(p_cod_fita in number)
+RETURN  number is
+
+preco number;
+
+CURSOR c1
+IS
+  SELECT preco_locacao FROM vw_Fita WHERE cod_fita = p_cod_fita;
+
+Begin
+open c1;
+fetch c1 into preco;
+close c1;
+
+return preco;
+
+exception
+
+when NO_DATA_FOUND then 
+raise_application_error(-20000, 'Fita não encontrada ou indisponível');
+
+end ;
+
+select fn_fita(44) from dual;
