@@ -199,3 +199,55 @@ raise_application_error(-20000, 'Fita não encontrada ou indisponível');
 end ;
 
 select fn_fita(44) from dual;
+
+/*EX 6 */
+
+desc locacao;
+
+create or replace TRIGGER tgr_locacao
+before insert on LOCACAO
+for each row
+BEGIN
+    IF (to_char(:new.data_locacao, 'D') = 1 or to_char(:new.data_locacao, 'D') = 7 )  THEN 
+      :new.valor_locacao :=  (fn_fita(:new.cod_fita)*0.10) + fn_fita(:new.cod_fita) ;
+    ELSE
+       :new.valor_locacao :=  fn_fita(:new.cod_fita) ;
+
+      END IF ;
+    
+END;
+
+delete  from locacao;
+
+insert into locacao(cod_cliente,cod_fita,data_locacao,data_devolucao) values (21,21,'12/11/2022','11/12/2022');
+
+select * from locacao;
+
+select fn_fita(21) from dual ;
+select to_char(locacao.data_locacao, 'D') from locacao;
+
+/*EX 6 */
+
+desc locacao;
+
+create or replace TRIGGER tgr_locacao
+before insert on LOCACAO
+for each row
+BEGIN
+    IF (to_char(:new.data_locacao, 'D') = 1 or to_char(:new.data_locacao, 'D') = 7 )  THEN 
+      :new.valor_locacao :=  (fn_fita(:new.cod_fita)*0.10) + fn_fita(:new.cod_fita) ;
+    ELSE
+       :new.valor_locacao :=  fn_fita(:new.cod_fita) ;
+
+      END IF ;
+    
+END;
+
+delete  from locacao;
+
+insert into locacao(cod_cliente,cod_fita,data_locacao,data_devolucao) values (21,21,'12/11/2022','11/12/2022');
+
+select * from locacao;
+
+select fn_fita(21) from dual ;
+select to_char(locacao.data_locacao, 'D') from locacao;
