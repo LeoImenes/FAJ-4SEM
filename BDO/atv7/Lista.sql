@@ -251,3 +251,17 @@ select * from locacao;
 
 select fn_fita(21) from dual ;
 select to_char(locacao.data_locacao, 'D') from locacao;
+
+
+/*EX 7 */
+create or replace trigger tgr_locacao_disponivel
+after insert on locacao
+for each row 
+begin 
+    update fitas set disponivel =  'N' where cod_fita = cod_fita;
+end;
+
+select * from locacao;
+insert into locacao(cod_cliente,cod_fita,data_locacao,data_devolucao) values (22,44,'12/11/2022','11/12/2022');
+
+/*EX 8 */
