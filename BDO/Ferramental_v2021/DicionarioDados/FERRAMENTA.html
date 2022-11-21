@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="plsqldoc.css">
+ <TITLE>Table FERRAMENTA</TITLE>
+ <META name="object" content="TABLE">
+ <META name="name" content="FERRAMENTA">
+ <META name="description" content="Tabela para armazenar as diversas ferramentas que dever&#227;o er sua vida &#250;til controlada pelo Sistema.">
+ <META name="columns" content="ID_FERRAMENTA S_NUMERO_PATRIMONIO S_DESCRICAO D_DATA_COMPRA">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL></SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Table FERRAMENTA</P>
+Tabela para armazenar as diversas ferramentas que deverão er sua vida útil controlada pelo Sistema.
+</TD></TR></TABLE>
+<HR>
+<A NAME="Columns"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Columns
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Type
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Optional
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Default
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Comments
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+ID_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Identificador da Ferramenta. Número sequencial gerado automaticamente pelo Sistema.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+S_NUMERO_PATRIMONIO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+VARCHAR2(50)
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Número de Patrimônio da Ferramenta.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+S_DESCRICAO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+VARCHAR2(4000)
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Y
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Campo para descrição detalhada da ferramenta.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+D_DATA_COMPRA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+DATE
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Data de Cadastro da Ferramenta no Sistema. 
+</TD>
+</TR>
+</TABLE>
+<HR>
+<A NAME="Primary Key"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Primary Key
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Columns
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+XPKFERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_FERRAMENTA
+</TD>
+</TR>
+</TABLE>
+<HR>
+<A NAME="Indexes"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Indexes
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Columns
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Type
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+XAK1FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+S_NUMERO_PATRIMONIO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Unique
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+XPKFERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Unique
+</TD>
+</TR>
+</TABLE>
+<HR>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="plsqldoc.css">
+ <TITLE>Table PECA</TITLE>
+ <META name="object" content="TABLE">
+ <META name="name" content="PECA">
+ <META name="description" content="Cadastro das pe&#231;as que ter&#227;o seus recebimentos controlados pelo sistema de Controle de Vida &#218;til de Ferramentas.">
+ <META name="columns" content="PART_NUMBER S_NOME S_DESCRICAO_UTILIZACAO S_ATIVO ID_PECA">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL></SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Table PECA</P>
+Cadastro das peças que terão seus recebimentos controlados pelo sistema de Controle de Vida Útil de Ferramentas.
+</TD></TR></TABLE>
+<HR>
+<A NAME="Columns"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Columns
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Type
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Optional
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Default
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Comments
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+PART_NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+VARCHAR2(30)
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Part-Number da Peça. Informação vinda do SAP.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+S_NOME
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+VARCHAR2(128)
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Nome ou descrição da Peça, conforme cadastro no SAP.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+S_DESCRICAO_UTILIZACAO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+VARCHAR2(4000)
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Y
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Descrição da utilização da Peça.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+S_ATIVO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+VARCHAR2(1)
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+FLAG para indicar se a Peça está Ativa (S) ou Inativa (N). Apenas Peças cadastradas como ativas podem ser usados para criação de novas informações. Por padrão assume o valor (S).
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+ID_PECA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Chave primaria da tabela, formado por um número sequencial.
+</TD>
+</TR>
+</TABLE>
+<HR>
+<A NAME="Primary Key"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Primary Key
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Columns
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+XPKPECA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_PECA
+</TD>
+</TR>
+</TABLE>
+<HR>
+<A NAME="Check Constraints"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Check Constraints
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Condition
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+CK_PECA_ATIVO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+S_ATIVO IN ('S', 'N')
+</TD>
+</TR>
+</TABLE>
+<HR>
+<A NAME="Indexes"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Indexes
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Columns
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Type
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+XAK1PECA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+PART_NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Unique
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+XPKPECA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_PECA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Unique
+</TD>
+</TR>
+</TABLE>
+<HR>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

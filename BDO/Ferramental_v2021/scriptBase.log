@@ -1,0 +1,229 @@
+
+Creating table FERRAMENTA
+=========================
+
+
+Table FERRAMENTA criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Table FERRAMENTA alterado.
+
+
+Index XAK1FERRAMENTA criado.
+
+
+Creating table FORNECEDOR
+=========================
+
+
+Table FORNECEDOR criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Table FORNECEDOR alterado.
+
+
+Table FORNECEDOR alterado.
+
+
+Index XAK1FORNECEDORES criado.
+
+
+Creating table PECA
+===================
+
+
+Table PECA criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Table PECA alterado.
+
+
+Table PECA alterado.
+
+
+Index XAK1PECA criado.
+
+
+Creating table ALOCACAO_FERRAMENTA
+==================================
+
+
+Table ALOCACAO_FERRAMENTA criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Table ALOCACAO_FERRAMENTA alterado.
+
+
+Table ALOCACAO_FERRAMENTA alterado.
+
+
+Table ALOCACAO_FERRAMENTA alterado.
+
+
+Table ALOCACAO_FERRAMENTA alterado.
+
+
+Creating table ACRESCIMO_PRODUCAO
+=================================
+
+
+Table ACRESCIMO_PRODUCAO criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Table ACRESCIMO_PRODUCAO alterado.
+
+
+Table ACRESCIMO_PRODUCAO alterado.
+
+
+Creating table RECEBIMENTO
+==========================
+
+
+Table RECEBIMENTO criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Comment criado.
+
+
+Table RECEBIMENTO alterado.
+
+
+Table RECEBIMENTO alterado.
+
+
+Table RECEBIMENTO alterado.
+
+
+Table RECEBIMENTO alterado.
+
+
+Table RECEBIMENTO alterado.
+
+
+Creating table EMAIL_ENVIADO
+==========================
+
+
+Table EMAIL_ENVIADO criado.
+

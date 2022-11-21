@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="plsqldoc.css">
+ <TITLE>Table ALOCACAO_FERRAMENTA</TITLE>
+ <META name="object" content="TABLE">
+ <META name="name" content="ALOCACAO_FERRAMENTA">
+ <META name="description" content="Tabela contendo a Aloca&#231;&#227;o de uma ferramenta em um determinado fornecedor produzindo determinada pe&#231;a.">
+ <META name="columns" content="ID_FORNECEDOR ID_FERRAMENTA ID_ALOCACAO_FERRAMENTA N_CAPACIDADE_INICIAL_PRODUCAO D_INICIO_USO D_FIM_USO N_PORCENTAGEM_AVISO ID_PECA">
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%"><TR>
+<TD><P ALIGN="LEFT"><STRONG><SMALL></SMALL></STRONG></TD>
+<TD><P ALIGN="RIGHT"><STRONG><SMALL><A HREF="index.html">index</A></SMALL></STRONG></TD>
+</TR></TABLE>
+<TABLE CLASS="MAIN_TABLE"><TR><TD CLASS="DESC_TEXT">
+<P CLASS="MAIN_TITLE">Table ALOCACAO_FERRAMENTA</P>
+Tabela contendo a Alocação de uma ferramenta em um determinado fornecedor produzindo determinada peça.
+</TD></TR></TABLE>
+<HR>
+<A NAME="Columns"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Columns
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Type
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Optional
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Default
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Comments
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+ID_FORNECEDOR
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Chave estangeira da tabela FORNECEDOR e identifica qual é o Fornecedor que está usando a Ferramenta alocada para produzir a peça especificada.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+ID_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Chave estrangeira da Tabela FERRAMENTA e identifica qual é a Ferramenta alocada ao Fornecedor para produzir determinada Peça.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+ID_ALOCACAO_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Identificador da Alocação de uma Ferramenta usada por um Fornecdor para produzir uma determinada Peça. Número sequencial criado automaticamente pelo Sistema.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+N_CAPACIDADE_INICIAL_PRODUCAO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Capacidade inicial prevista para produção por essa alocação de ferramenta. Valor em Número de Peças.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+D_INICIO_USO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+DATE
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Data de Início da Alocação no Fornecedor.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+D_FIM_USO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+DATE
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Y
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Data Final de Uso da Alocação da Ferramenta no Fornecedor.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+N_PORCENTAGEM_AVISO
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+NUMBER(2)
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Porcentagem de produção da ferramenta a partir da qual os usuários serão avisados que a vida útil da ferramenta está terminando. O Valor padrão, caso não se preencha a informação, será 70%.
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+ID_PECA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+NUMBER
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+&nbsp;
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Chave estrangeira da tabela PECA e indica qual é a peça produzida pela Ferramenta no Fornecedor.
+</TD>
+</TR>
+</TABLE>
+<HR>
+<A NAME="Primary Key"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Primary Key
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Columns
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+XPKALOCACAO_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_ALOCACAO_FERRAMENTA
+</TD>
+</TR>
+</TABLE>
+<HR>
+<A NAME="Foreign Keys"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Foreign Keys
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Columns
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Referencing Table
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Columns
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+FK_FERRAMENTA_ALOCACAO_FERRAM
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_FERRAMENTA
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+FK_FORNECEDOR_ALOCACAO_FERRAM
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_FORNECEDOR
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+FORNECEDOR
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_FORNECEDOR
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+FK_PECA_ALOCACAO_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_PECA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+PECA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_PECA
+</TD>
+</TR>
+</TABLE>
+<HR>
+<A NAME="Indexes"></A>
+<TABLE CLASS="SUB_TABLE"><TR><TD CLASS="SUB_TITLE">
+Indexes
+</TD></TR></TABLE>
+<TABLE CLASS="SIMPLE_TABLE">
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Name
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Columns
+</U>
+</TD>
+<TD VALIGN="TOP" CLASS="LIST_ITEM"><U>
+Type
+</U>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP" CLASS="LIST_ITEM">
+XPKALOCACAO_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+ID_ALOCACAO_FERRAMENTA
+</TD>
+<TD VALIGN="TOP" CLASS="DESC_TEXT">
+Unique
+</TD>
+</TR>
+</TABLE>
+<HR>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>
